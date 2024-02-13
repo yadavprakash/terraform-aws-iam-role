@@ -33,11 +33,11 @@ module "iam-role" {
 Make sure to configure the variables according to your requirements.
 
 ## Module Inputs
-- name (string): The name of the IAM role.
-- environment (string): The environment in which the IAM role is being created.
-- assume_role_policy (object): The IAM policy document defining who can assume the role.
-- policy_enabled (bool): Flag indicating whether the IAM policy should be enabled.
-- policy (object): The IAM policy document defining the permissions granted.
+- `name` (string): The name of the IAM role.
+- `environment` (string): The environment in which the IAM role is being created.
+- `assume_role_policy`(object): The IAM policy document defining who can assume the role.
+- `policy_enabled` (bool): Flag indicating whether the IAM policy should be enabled.
+- `policy` (object): The IAM policy document defining the permissions granted.
 
 ## Module Outputs
 - iam_role_arn (string): The ARN of the created IAM role.

@@ -30,17 +30,6 @@ module "iam-role" {
   policy             = data.aws_iam_policy_document.iam-policy.json
 }
 ```
-Make sure to configure the variables according to your requirements.
-
-## Module Inputs
-- `name` (string): The name of the IAM role.
-- `environment` (string): The environment in which the IAM role is being created.
-- `assume_role_policy`(object): The IAM policy document defining who can assume the role.
-- `policy_enabled` (bool): Flag indicating whether the IAM policy should be enabled.
-- `policy` (object): The IAM policy document defining the permissions granted.
-
-## Module Outputs
-- iam_role_arn (string): The ARN of the created IAM role.
 
 ## Examples
 For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-aws-iam-role/tree/master/_example) directory within this repository.
@@ -50,6 +39,7 @@ Your Name Replace '[License Name]' and '[Your Name]' with the appropriate licens
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-aws-iam-role/blob/master/LICENSE) file for details.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

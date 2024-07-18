@@ -22,7 +22,7 @@ To get started, make sure you have configured your AWS provider. You can use the
 ```hcl
 
 module "iam-role" {
-  source             = "git::https://github.com/opsstation/terraform-aws-iam-role.git?ref=v1.0.0"
+  source             = "git::https://github.com/yadavprakash/terraform-aws-iam-role.git?ref=v1.0.0"
   name               = "iam"
   environment        = "test"
   assume_role_policy = data.aws_iam_policy_document.default.json
@@ -32,13 +32,13 @@ module "iam-role" {
 ```
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-aws-iam-role/tree/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/yadavprakash/terraform-aws-iam-role/tree/master/_example) directory within this repository.
 
 ## Author
 Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-aws-iam-role/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/yadavprakash/terraform-aws-iam-role/blob/master/LICENSE) file for details.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -58,7 +58,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_lables"></a> [lables](#module\_lables) | git::https://github.com/opsstation/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_lables"></a> [lables](#module\_lables) | git::https://github.com/yadavprakash/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -79,7 +79,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_force_detach_policies"></a> [force\_detach\_policies](#input\_force\_detach\_policies) | The policy that grants an entity permission to assume the role. | `bool` | `false` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
 | <a name="input_managed_policy_arns"></a> [managed\_policy\_arns](#input\_managed\_policy\_arns) | Set of exclusive IAM managed policy ARNs to attach to the IAM role | `list(any)` | `[]` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsstation' | `string` | `""` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash' | `string` | `""` | no |
 | <a name="input_max_session_duration"></a> [max\_session\_duration](#input\_max\_session\_duration) | The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours. | `number` | `3600` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_path"></a> [path](#input\_path) | The path to the role. | `string` | `"/"` | no |

@@ -22,7 +22,7 @@ To get started, make sure you have configured your AWS provider. You can use the
 ```hcl
 
 module "iam-role" {
-  source             = "git::https://github.com/yadavprakash/terraform-aws-iam-role.git?ref=v1.0.0"
+  source             = "git::https://github.com/yadavprakash/terraform-aws-iam-role.git"
   name               = "iam"
   environment        = "test"
   assume_role_policy = data.aws_iam_policy_document.default.json
